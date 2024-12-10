@@ -54,7 +54,7 @@ scale = tk.Scale(window, from_=0, to=510, length=1000,
                  orient="horizontal", tickinterval=50)
 scale.pack()
 
-label5 = tk.Label(window, font=("Comic Snas MS", 10),
+label5 = tk.Label(window, font=("Comic Sans MS", 10),
                   text="Select Event Theme:")
 label5.pack()
 
