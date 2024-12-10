@@ -19,19 +19,19 @@ label2 = tk.Label(window, font=("Comic Sans MS", 10),
                   text="Select Preferences:")
 label2.pack()
 
-chcating = tk.BooleanVar()
+chcating = tk.IntVar()
 chcat = tk.Checkbutton(window, font=(
-    "Comic Sans MS", 10), text="Include Catering")
+    "Comic Sans MS", 10), text="Include Catering", variable=chcating)
 chcat.pack(anchor="w")
 
-chmusic = tk.BooleanVar()
+chmusic = tk.IntVar()
 chmus = tk.Checkbutton(window, font=(
-    "Comic Sans MS", 10), text="Provide Music")
+    "Comic Sans MS", 10), text="Provide Music", variable=chmusic)
 chmus.pack(anchor="w")
 
-chonlinest = tk.BooleanVar()
+chonlinest = tk.IntVar()
 chol = tk.Checkbutton(window, font=("Comic Sans MS", 10),
-                      text="Enable Online Streaming")
+                      text="Enable Online Streaming", variable=chonlinest)
 chol.pack(anchor="w")
 
 label3 = tk.Label(window, font=("Comic Sans MS", 10),
@@ -77,15 +77,15 @@ def reset():
 
 
 def submit():
-    if chcating.get() == True:
+    if chcating.get() == 1:
         catering = "Include Catering"
     else:
         catering = ""
-    if chmusic.get() == True:
+    if chmusic.get() == 1:
         music = "Provide Music"
     else:
         music = ""
-    if chonlinest.get() == True:
+    if chonlinest.get() == 1:
         streaming = "Enable Online Streaming"
     else:
         streaming = ""
